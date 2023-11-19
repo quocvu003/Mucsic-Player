@@ -298,6 +298,7 @@
             _this.loadCurrentSong();
             _this.render();
             audio.play();
+            cdThumbAnimate.cancel();
           }
       };
     },
@@ -309,9 +310,9 @@
     },
 
     loadConfig: function () {
-      this.isRandom = this.config.isRandom;
-      this.isRepeat = this.config.isRepeat;
-      // this.currentIndex = this.config.currentIndex;
+      this.isRandom = this.config.isRandom || false;
+      this.isRepeat = this.config.isRepeat || false;
+      this.currentIndex = this.config.currentIndex || 0;
     },
 
     nextSong: function () {
