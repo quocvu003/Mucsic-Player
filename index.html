@@ -168,7 +168,7 @@
     defineProperties: function () {
       Object.defineProperty(this, "currentSong", {
         get: function () {
-          this.setConfig("currentIndex", this.currentIndex);
+          // this.setConfig("currentIndex", this.currentIndex);
           return this.songs[this.currentIndex];
         },
       });
@@ -311,7 +311,7 @@
     loadConfig: function () {
       this.isRandom = this.config.isRandom;
       this.isRepeat = this.config.isRepeat;
-      this.currentIndex = this.config.currentIndex;
+      // this.currentIndex = this.config.currentIndex;
     },
 
     nextSong: function () {
